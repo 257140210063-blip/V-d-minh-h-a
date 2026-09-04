@@ -1,0 +1,8 @@
+void Complex::Input() {
+    cout << "Phan thuc: "; cin >> this->Real;
+    cout << "Phan ao  : "; cin >> this->Imaginary;
+}
+
+void Complex::Print() {
+    cout << "(" << this->Real << ", " << this->Imaginary << ")";
+}
