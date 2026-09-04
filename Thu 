@@ -2,7 +2,12 @@ void Complex::Input() {
     cout << "Phan thuc: "; cin >> this->Real;
     cout << "Phan ao  : "; cin >> this->Imaginary;
 }
-
 void Complex::Print() {
     cout << "(" << this->Real << ", " << this->Imaginary << ")";
 }
+git pull origin main
+git diff                   # Kiểm tra thay đổi thực tế trong Working Directory
+git status
+git add Complex.cpp
+git commit -m "feat: implement Input and Print methods"
+git push origin main
