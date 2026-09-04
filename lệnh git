@@ -1,0 +1,13 @@
+int main() {
+    Complex c1(1.23, 4.5), c2(10.1, 20.3), c3;
+    cout << "\nSo phuc C1: ";
+    c1.Print();
+    cout << "\nSo phuc C2: ";
+    c2.Print();
+    
+    c3 = c1.Add(c2);
+    cout << "\nSo phuc C3 (C1 + C2): ";
+    c3.Print();
+    cout << endl;
+    return 0;
+}
