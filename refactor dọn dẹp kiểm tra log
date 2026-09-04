@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+private:
+    double Real, Imaginary;
+public:
+    Complex() {
+        Real = 0.0;
+        Imaginary = 0.0;
+    }
+    Complex(double r, double i) {
+        Real = r;
+        Imaginary = i;
+    }
+    void Input();
+    void Print();
+    Complex Add(Complex c2);
+};
+
+void Complex::Input() {
+    cout << "Phan thuc: "; cin >> this->Real;
+    cout << "Phan ao  : "; cin >> this->Imaginary;
+}
+
+void Complex::Print() {
+    cout << "(" << this->Real << ", " << this->Imaginary << ")";
+}
+
+Complex Complex::Add(Complex c2) {
+    Complex c;
+    c.Real = Real + c2.Real;
+    c.Imaginary = Imaginary + c2.Imaginary;
+    return c;
+}
+
+int main() {
+    Complex c1(1.23, 4.5), c2(10.1, 20.3), c3;
+    cout << "\nSo phuc C1: ";
+    c1.Print();
+    cout << "\nSo phuc C2: ";
+    c2.Print();
+    
+    c3 = c1.Add(c2);
+    cout << "\nSo phuc C3: ";
+    c3.Print();
+    cout << endl;
+    return 0;
+}
